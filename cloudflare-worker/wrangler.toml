@@ -1,0 +1,10 @@
+name        = "truepocket-security"
+main        = "worker.js"
+compatibility_date = "2026-06-04"
+
+[vars]
+ENVIRONMENT = "production"
+
+[[routes]]
+pattern = "*truepocket.live/*"
+zone_name = "truepocket.live"

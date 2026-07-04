@@ -1,0 +1,10 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://www.truepocket.live",
+      "status": [
+        {"href": "https://www.truepocket.live/", "type": "text/html"}
+      ]
+    }
+  ]
+}

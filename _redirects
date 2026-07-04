@@ -1,0 +1,4 @@
+# Force HTTP/HTTPS → HTTPS WWW redirects
+http://truepocket.live/*       https://www.truepocket.live/:splat  301!
+http://www.truepocket.live/*   https://www.truepocket.live/:splat  301!
+https://truepocket.live/*      https://www.truepocket.live/:splat  301!

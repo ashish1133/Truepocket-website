@@ -1,0 +1,7 @@
+{
+  "resource": "https://www.truepocket.live",
+  "authorization_servers": [
+    "https://www.truepocket.live"
+  ],
+  "scopes_supported": ["public"]
+}
