@@ -1,0 +1,18 @@
+﻿User-agent: *
+Allow: /
+Disallow: /TruePocket.apk
+Disallow: /downloads/truepocket.apk
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.env
+
+# Sitemap
+Sitemap: https://www.truepocket.live/sitemap.xml
+
+# Security contact
+# Report vulnerabilities to: support1@truepocket.live
+
+# AI Agent Content Signals
+Content-Signal: ai-train=no, search=yes, ai-input=no
+
+

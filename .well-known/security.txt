@@ -1,0 +1,7 @@
+﻿Contact: mailto:support1@truepocket.live
+Preferred-Languages: en, ta, hi
+Canonical: https://www.truepocket.live/.well-known/security.txt
+Policy: https://www.truepocket.live/privacy.html
+Expires: 2027-06-04T00:00:00.000Z
+
+
