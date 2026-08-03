@@ -206,6 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // â”€â”€ 3D TILT FOR GLASS PANELS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     // Skip entirely on touch/mobile â€” not useful and costs event overhead
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (!isTouchDevice && window.innerWidth >= 768) {
         document.querySelectorAll('.glass-panel').forEach(el => {
             let tiltPending = false;
