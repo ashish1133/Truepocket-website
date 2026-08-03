@@ -470,16 +470,18 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 /* Logo image — block-level for consistent vertical centering */
 .logo-image {
     display: block;
-    height: 56px;
+    height: 64px;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
-    transition: filter 0.3s ease, transform 0.2s ease;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 /* Slightly smaller logo in the footer */
 .footer .logo-image {
-    height: 36px;
+    height: 54px;
 }
 
 .logo:hover .logo-image {
