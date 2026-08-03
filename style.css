@@ -427,7 +427,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .navbar {
     position: relative;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 20px;
     transition: all 0.3s ease;
 }
 
@@ -448,7 +448,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 16px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -470,8 +470,8 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 /* Logo image — block-level for consistent vertical centering */
 .logo-image {
     display: block;
-    height: 44px;
-    width: auto;
+    height: 56px;
+    width: 56px;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
     transition: filter 0.3s ease, transform 0.2s ease;
