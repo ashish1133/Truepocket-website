@@ -475,10 +475,10 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 /* Logo image — block-level for consistent vertical centering */
 .logo-image {
     display: block;
-    height: 80px;
-    width: 80px;
+    height: 100%;
+    width: 100%;
     max-width: none;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 /* Slightly smaller logo in the footer */
