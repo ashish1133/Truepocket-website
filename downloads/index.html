@@ -192,7 +192,7 @@ src="https://www.facebook.com/tr?id=27297236573246844&ev=PageView&noscript=1"
         <p class="ios-note">iOS coming soon</p>
 
         <div class="checksum-box">
-            <h3>ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂÃ¢â‚¬â„¢ Verify before installing</h3>
+            <h3>🛡️ Verify before installing</h3>
             <p>Check this SHA-256 hash matches before installing. This confirms the file is unmodified.</p>
             <span class="hash" id="hash-value">5AA791E547E3356C19C0FEA31DB78B6479D4D40B71568DF169058452A5E76D44</span>
             <button class="copy-btn" onclick="copyHash()" id="copy-btn">
@@ -202,17 +202,17 @@ src="https://www.facebook.com/tr?id=27297236573246844&ev=PageView&noscript=1"
         </div>
 
         <div class="instructions">
-            <h3>ÃƒÂ°Ã…Â¸Ã¢â‚¬Å“Ã¢â‚¬Â¹ How to install</h3>
+            <h3>📱 How to install</h3>
             <ol>
                 <li>Download the APK using the button above.</li>
-                <li>On your Android device, go to <strong>Settings ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Apps ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Special app access ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ Install unknown apps</strong>.</li>
+                <li>On your Android device, go to <strong>Settings &rarr; Apps &rarr; Special app access &rarr; Install unknown apps</strong>.</li>
                 <li>Allow your browser or file manager to install apps from unknown sources.</li>
                 <li>Open the downloaded APK file and tap <strong>Install</strong>.</li>
                 <li>Once installed, you can revert the unknown sources permission for security.</li>
             </ol>
         </div>
 
-        <a href="../index.html" class="back">ÃƒÂ¢Ã¢â‚¬Â Ã‚Â Return to Home</a>
+        <a href="../index.html" class="back">&larr; Return to Home</a>
     </div>
 
     <script>
@@ -220,7 +220,7 @@ src="https://www.facebook.com/tr?id=27297236573246844&ev=PageView&noscript=1"
             const hash = document.getElementById('hash-value').textContent.trim();
             navigator.clipboard.writeText(hash).then(() => {
                 const btn = document.getElementById('copy-btn');
-                btn.textContent = 'ÃƒÂ¢Ã…â€œÃ¢â‚¬Å“ Copied';
+                btn.textContent = '✓ Copied';
                 setTimeout(() => { btn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy hash'; }, 2000);
             });
         }
