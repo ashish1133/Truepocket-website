@@ -471,7 +471,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .logo-image {
     display: block;
     height: 56px;
-    width: 56px;
+    width: auto;
     object-fit: contain;
     filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.4));
     transition: filter 0.3s ease, transform 0.2s ease;
