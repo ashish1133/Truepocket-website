@@ -448,9 +448,14 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .logo {
     display: flex;
     align-items: center;
-    gap: 16px;
-    font-size: 24px;
-    font-weight: 700;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 /* Make nav links centered between logo and actions */
@@ -470,13 +475,10 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 /* Logo image — block-level for consistent vertical centering */
 .logo-image {
     display: block;
-    height: 44px;
-    width: auto;
-    object-fit: contain;
-    border-radius: 50%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    height: 90px;
+    width: 90px;
+    max-width: none;
+    object-fit: cover;
 }
 
 /* Slightly smaller logo in the footer */
@@ -484,8 +486,8 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
     height: 54px;
 }
 
-.logo:hover .logo-image {
-    filter: drop-shadow(0 0 16px rgba(37, 99, 235, 0.8)) drop-shadow(0 0 28px rgba(245, 158, 11, 0.5));
+.logo:hover {
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
     transform: scale(1.05);
 }
 
