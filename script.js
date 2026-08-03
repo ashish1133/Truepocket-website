@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Truepocket â€” script.js  (performance-optimised)
    Key improvements:
    â€¢ Passive event listeners everywhere possible
@@ -202,56 +202,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.stat-card').forEach(c => statObserver.observe(c));
 
-
-    // â”€â”€ CUSTOM CURSOR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-    const cursorDot     = document.querySelector('.cursor-dot');
-    const cursorOutline = document.querySelector('.cursor-outline');
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (!isTouchDevice && cursorDot && cursorOutline) {
-        document.documentElement.style.cursor = 'none';
-        document.querySelectorAll('a, button, .feature-card, .store-btn').forEach(el => {
-            el.style.cursor = 'none';
-        });
-
-        let mouseX = innerWidth / 2, mouseY = innerHeight / 2;
-        let outX = mouseX, outY = mouseY;
-        let pendingMouse = false;
-
-        // Throttle mousemove with rAF
-        window.addEventListener('mousemove', e => {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-            if (!pendingMouse) {
-                pendingMouse = true;
-                requestAnimationFrame(() => {
-                    cursorDot.style.transform = `translate3d(${mouseX}px,${mouseY}px,0) translate(-50%,-50%)`;
-                    pendingMouse = false;
-                });
-            }
-        }, { passive: true });
-
-        (function tickOutline() {
-            outX += (mouseX - outX) * 0.14;
-            outY += (mouseY - outY) * 0.14;
-            cursorOutline.style.transform = `translate3d(${outX}px,${outY}px,0) translate(-50%,-50%)`;
-            requestAnimationFrame(tickOutline);
-        })();
-
-        // Hover effects on interactive elements
-        document.querySelectorAll('a, button, .feature-card, .store-btn').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursorOutline.style.width  = '60px';
-                cursorOutline.style.height = '60px';
-                cursorOutline.style.backgroundColor = 'rgba(16, 185, 129, 0.1)';
-            }, { passive: true });
-            el.addEventListener('mouseleave', () => {
-                cursorOutline.style.width  = '40px';
-                cursorOutline.style.height = '40px';
-                cursorOutline.style.backgroundColor = 'transparent';
-            }, { passive: true });
-        });
-    }
 
 
     // â”€â”€ 3D TILT FOR GLASS PANELS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
