@@ -475,8 +475,8 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 /* Logo image — block-level for consistent vertical centering */
 .logo-image {
     display: block;
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
     max-width: none;
     object-fit: cover;
 }
