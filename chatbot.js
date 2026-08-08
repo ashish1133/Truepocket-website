@@ -1,4 +1,4 @@
-﻿// ============================================================
+// ============================================================
 //  Truepocket Support Chatbot
 //  Fully trained on all website content:
 //  index.html, about.html, terms.html, privacy.html
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             patterns: ['is it a bank', 'nbfc', 'rbi registered', 'rbi',
                        'regulated', 'bank registered', 'not a bank'],
-            answer: "Truepocket is NOT a bank or NBFC (Non-Banking Financial Company). As disclosed in our Terms (Section 12):\n\nâ€¢ Advances are funded from our own limited funds\nâ€¢ Intended for a limited number of eligible users\nâ€¢ We do not accept public deposits or investment funds\nâ€¢ Advance availability depends on available funds and internal policies\n\nThis transparency is part of our commitment to honest communication."
+            answer: "Truepocket is an LLP registered company and operates on an LSP (Lending Service Provider) model connecting with NBFCs. As disclosed in our Terms (Section 12):\n\n• Advances are facilitated through our NBFC partners\n• Intended for eligible users\n• We do not accept public deposits or investment funds\n• Advance availability depends on partner NBFC funds and internal policies\n\nThis transparency is part of our commitment to honest communication."
         },
 
         // â”€â”€ FRAUD PREVENTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
