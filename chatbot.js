@@ -239,15 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
                        'reach support', 'customer service', 'need help'],
             answer: "Contact Truepocket support:\n\nðŸ“§ Email: support1@truepocket.live\nðŸŒ Website: truepocket.live\nðŸ“„ About Us: truepocket.live/about.html\n\nWe're here to help with application questions, account issues, repayment, fees, or anything else!"
         },
-
-        // â”€â”€ SOCIAL MEDIA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ──── SOCIAL MEDIA ────────────────────────────────────────────────
         {
             patterns: ['social media', 'facebook', 'instagram', 'twitter',
                        'linkedin', 'follow truepocket'],
-            answer: "You can follow Truepocket on social media:\n\nðŸ“˜ Facebook: facebook.com/truepocket\nðŸ¦ Twitter/X: twitter.com/truepocket\nðŸ“¸ Instagram: instagram.com/truepocket\nðŸ’¼ LinkedIn: linkedin.com/company/truepocket"
+            answer: "You can follow Truepocket on social media:\n\n📘 Facebook: facebook.com/profile.php?id=61592697014065\n🐦 Twitter/X: twitter.com/truepocket\n📸 Instagram: instagram.com/truepocket\n💼 LinkedIn: linkedin.com/company/true-pocket/posts/?feedView=all"
         },
 
-        // â”€â”€ RATINGS / REVIEWS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ──── RATINGS / REVIEWS ───────────────────────────────────────────
         {
             patterns: ['rating', 'reviews', 'user rating', 'stars', '4.9',
                        'is it good', 'trusted', 'trustworthy', 'genuine',
