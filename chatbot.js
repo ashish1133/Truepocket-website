@@ -210,22 +210,22 @@ document.addEventListener('DOMContentLoaded', () => {
             answer: "You must be at least 18 years old to use Truepocket (Terms, Section 1). Our services are not available to minors. If we discover data collected from anyone under 18, it is deleted promptly (Privacy Policy, Section 9)."
         },
 
-        // â”€â”€ GOVERNING LAW / JURISDICTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ──── GOVERNING LAW / JURISDICTION ───────────────────────────
         {
             patterns: ['governing law', 'jurisdiction', 'legal jurisdiction',
                        'which court', 'chennai court', 'dispute'],
             answer: "Truepocket is governed by the laws of India. Any disputes are subject to the jurisdiction of competent courts in Chennai, Tamil Nadu (Terms, Section 26 & Privacy Policy, Section 11)."
         },
 
-        // â”€â”€ COMPARISON WITH OTHER APPS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ──── COMPARISON WITH OTHER APPS ─────────────────────────────
         {
             patterns: ['better than other apps', 'vs mpokket', 'compared to other apps',
                        'why truepocket is better', 'difference from other apps',
                        'why choose truepocket', 'truepocket vs'],
-            answer: "Truepocket vs other cash apps:\n\nâœ… ZERO upfront processing fees (others hide fees as 'zero interest')\nâœ… No harassment â€” we never contact your friends/family\nâœ… Clear flat late fee â€” only after Day 6, shown upfront\nâœ… Bank-grade 256-bit encryption â€” data never sold\nâœ… Transparent terms before acceptance\n\nâŒ Other apps: high hidden fees, contact list harassment, confusing penalties, data sold to marketers"
+            answer: "Truepocket vs other cash apps:\n\n✅ ZERO upfront processing fees (others hide fees as 'zero interest')\n✅ No harassment — we never contact your friends/family\n✅ Clear flat late fee — only after Day 6, shown upfront\n✅ Bank-grade 256-bit encryption — data never sold\n✅ Transparent terms before acceptance\n\n❌ Other apps: high hidden fees, contact list harassment, confusing penalties, data sold to marketers"
         },
 
-        // â”€â”€ TERMS AND CONDITIONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ──── TERMS AND CONDITIONS ───────────────────────────────────
         {
             patterns: ['terms', 'terms and conditions', 'terms of service',
                        'what are the terms', 'read terms'],
@@ -280,23 +280,95 @@ document.addEventListener('DOMContentLoaded', () => {
     //  Whole-word / whole-phrase matching to avoid false hits
     //  (e.g., "hi" inside "ashish", "fee" inside "coffee")
     // ----------------------------------------------------------
+    function levenshtein(a, b) {
+        if (a.length === 0) return b.length;
+        if (b.length === 0) return a.length;
+        const matrix = [];
+        for (let i = 0; i <= b.length; i++) { matrix[i] = [i]; }
+        for (let j = 0; j <= a.length; j++) { matrix[0][j] = j; }
+        for (let i = 1; i <= b.length; i++) {
+            for (let j = 1; j <= a.length; j++) {
+                if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                    matrix[i][j] = matrix[i - 1][j - 1];
+                } else {
+                    matrix[i][j] = Math.min(matrix[i - 1][j - 1] + 1, Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1));
+                }
+            }
+        }
+        return matrix[b.length][a.length];
+    }
+
     function findAnswer(userMessage) {
         const text = userMessage.toLowerCase().trim();
+        const userWords = text.replace(/[^\w\s]/g, '').split(/\s+/).filter(w => w.length > 0);
+
+        let bestMatch = null;
+        let highestScore = 0;
 
         for (const entry of KB) {
             for (const pattern of entry.patterns) {
-                // Escape regex special chars in pattern
-                const escaped = pattern.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                // Match as whole word / phrase (not inside another word)
-                const regex = new RegExp('(?:^|[\\s,!?.])' + escaped + '(?:[\\s,!?.]|$)', 'i');
-                if (regex.test(text) || text === pattern) {
+                const patternStr = pattern.toLowerCase();
+                
+                if (text === patternStr) {
                     return entry.answer;
+                }
+                
+                const escaped = patternStr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+                const regex = new RegExp('(?:^|[\\s,!?.])' + escaped + '(?:[\\s,!?.]|$)', 'i');
+                if (regex.test(text)) {
+                    const score = 50 + patternStr.length;
+                    if (score > highestScore) {
+                        highestScore = score;
+                        bestMatch = entry.answer;
+                    }
+                    continue;
+                }
+
+                const patternWords = patternStr.replace(/[^\w\s]/g, '').split(/\s+/).filter(w => w.length > 0);
+                if (patternWords.length === 0) continue;
+
+                let matchCount = 0;
+                for (const pWord of patternWords) {
+                    let wordMatched = false;
+                    for (const uWord of userWords) {
+                        if (uWord === pWord) {
+                            wordMatched = true;
+                            break;
+                        }
+                        const dist = levenshtein(pWord, uWord);
+                        const maxDist = pWord.length <= 4 ? 0 : (pWord.length <= 7 ? 1 : 2); 
+                        if (dist <= maxDist) {
+                            wordMatched = true;
+                            break;
+                        }
+                        if (uWord.startsWith(pWord) && uWord.length - pWord.length <= 3) {
+                            wordMatched = true;
+                            break;
+                        }
+                        if (pWord.startsWith(uWord) && pWord.length - uWord.length <= 3) {
+                            wordMatched = true;
+                            break;
+                        }
+                    }
+                    if (wordMatched) matchCount++;
+                }
+
+                const matchRatio = matchCount / patternWords.length;
+                if (matchRatio >= 0.75) { 
+                    const score = matchRatio * 10 + patternWords.length; 
+                    if (score > highestScore) {
+                        highestScore = score;
+                        bestMatch = entry.answer;
+                    }
                 }
             }
         }
 
-        // Nothing matched â€” stay in scope
-        return "I'm only able to help with questions about Truepocket â€” things like fees, eligibility, repayment, security, privacy, or how to download the app.\n\nTry asking something like:\nâ€¢ \"How does it work?\"\nâ€¢ \"Are there any fees?\"\nâ€¢ \"What is the late fee policy?\"\nâ€¢ \"Is my data safe?\"";
+        if (bestMatch) {
+            return bestMatch;
+        }
+
+        return "I'm only able to help with questions about Truepocket — things like fees, eligibility, repayment, security, privacy, or how to download the app.\n\nTry asking something like:\n• \"How does it work?\"\n• \"Are there any fees?\"\n• \"What is the late fee policy?\"\n• \"Is my data safe?\"";
     }
 
     // ----------------------------------------------------------
