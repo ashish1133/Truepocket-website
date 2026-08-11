@@ -808,6 +808,46 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
     vertical-align: text-bottom;
 }
 
+/* Security Alert */
+.hero-security-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: rgba(239, 68, 68, 0.05);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: left;
+    max-width: 480px;
+    animation: fadeInDown 0.5s ease-out;
+}
+.hero-security-alert .alert-icon {
+    color: #ef4444;
+    font-size: 20px;
+    margin-top: 2px;
+}
+.hero-security-alert .alert-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.hero-security-alert .alert-content strong {
+    color: #ef4444 !important;
+    font-size: 13px;
+    font-weight: 700;
+}
+.hero-security-alert .alert-content span {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+.hero-security-alert .alert-content a {
+    color: var(--primary);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
 /* Urgency row */
 .urgency-row {
     display: flex;
