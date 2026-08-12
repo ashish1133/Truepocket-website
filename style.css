@@ -1167,7 +1167,6 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
     height: 120px;
     background: rgba(255,255,255,0.15);
     border-radius: 50%;
-    backdrop-filter: blur(4px);
 }
 
 .card-top {
