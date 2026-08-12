@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
             patterns: ['what is truepocket', 'what is this app', 'about truepocket',
                        'tell me about truepocket', 'what does truepocket do',
                        'truepocket kya hai', 'explain truepocket'],
-            answer: "Truepocket is a zero-interest instant cash advance app built for students, daily wage workers, and employees in India. It provides short-term microfinance support with no upfront processing fees, bank-grade security, and a strict No-Harassment policy. If you repay on time, it's 100% free."
+            answer: "Truepocket is a zero-interest instant cash Loan app built for students, daily wage workers, and employees in India. It provides short-term microfinance support with no upfront processing fees, bank-grade security, and a strict No-Harassment policy. If you repay on time, it's 100% free."
         },
 
         // â”€â”€ WHO CAN APPLY / ELIGIBILITY â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             patterns: ['interest', 'zero interest', 'interest rate', 'interest free',
                        'kya interest lagta hai', 'interest charges'],
-            answer: "Truepocket does NOT charge interest on the principal advance amount. As stated in our Terms (Section 5): we provide fully interest-free advances. The only charge possible is a flat late fee â€” and that only starts from Day 7 if you miss your repayment date."
+            answer: "Truepocket does NOT charge interest on the principal Loan amount. As stated in our Terms (Section 5): we provide fully interest-free Loans. The only charge possible is a flat late fee â€” and that only starts from Day 7 if you miss your repayment date."
         },
 
         // â”€â”€ LATE FEES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -58,15 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
             patterns: ['late fee', 'late fees', 'late payment', 'late charge',
                        'what if i pay late', 'missed payment', 'overdue',
                        'grace period', 'day 6', 'day 7', 'penalty'],
-            answer: "Late fee policy (from Terms, Section 6):\n\nâ€¢ Day 1â€“6 after due date: NO late fee (grace period)\nâ€¢ From Day 7 onwards: A flat late fee applies\nâ€¢ Continued default may result in additional penalties\n\nAll charges are clearly shown before you accept the advance. No surprises."
+            answer: "Late fee policy (from Terms, Section 6):\n\nâ€¢ Day 1â€“6 after due date: NO late fee (grace period)\nâ€¢ From Day 7 onwards: A flat late fee applies\nâ€¢ Continued default may result in additional penalties\n\nAll charges are clearly shown before you accept the Loan. No surprises."
         },
 
         // â”€â”€ HOW IT WORKS / STEPS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         {
             patterns: ['how does it work', 'how it works', 'how to apply',
                        'how to use', 'steps', 'process', 'how to get money',
-                       'how to get advance', 'application process', '3 steps'],
-            answer: "Getting started with Truepocket is 3 simple steps:\n\n1ï¸âƒ£ Download the APK from this website and create your secure account\n2ï¸âƒ£ Complete the digital form and review the terms, repayment date, and late fee rules before you confirm\n3ï¸âƒ£ If approved, funds are sent to your linked bank account\n\nApproved advances are generally disbursed within 5 minutes after approval."
+                       'how to get Loan', 'application process', '3 steps'],
+            answer: "Getting started with Truepocket is 3 simple steps:\n\n1ï¸âƒ£ Download the APK from this website and create your secure account\n2ï¸âƒ£ Complete the digital form and review the terms, repayment date, and late fee rules before you confirm\n3ï¸âƒ£ If approved, funds are sent to your linked bank account\n\nApproved Loans are generally disbursed within 5 minutes after approval."
         },
 
         // â”€â”€ DISBURSEMENT TIME â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
             patterns: ['how fast', 'how quick', 'disbursement', 'disburse', 'when will i get',
                        'how long does it take', 'instant', 'time to receive',
                        'money in how many minutes', '5 minutes'],
-            answer: "Approved advances are generally disbursed within 5 minutes after approval (as per our Terms, Section 3). Delays may occasionally occur due to banking systems or payment gateways, but we aim for the fastest possible transfer."
+            answer: "Approved Loans are generally disbursed within 5 minutes after approval (as per our Terms, Section 3). Delays may occasionally occur due to banking systems or payment gateways, but we aim for the fastest possible transfer."
         },
 
         // â”€â”€ DOWNLOAD THE APP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -122,15 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
             patterns: ['repay', 'repayment', 'pay back', 'how to repay',
                        'return money', 'due date', 'repayment date', 'when to pay',
                        'flexible repayment', 'repayment options'],
-            answer: "Repayment details (Terms, Section 4):\n\nâœ… The repayment date and all charges are shown clearly before you accept\nâœ… You agree to repay on or before the due date\nâœ… Pick a repayment timeline that fits your budget\nâœ… Grace period: No late fee for Days 1â€“6 after due date\nâœ… Late fee applies only from Day 7 onwards\n\nPay on time = 100% free advance."
+            answer: "Repayment details (Terms, Section 4):\n\nâœ… The repayment date and all charges are shown clearly before you accept\nâœ… You agree to repay on or before the due date\nâœ… Pick a repayment timeline that fits your budget\nâœ… Grace period: No late fee for Days 1â€“6 after due date\nâœ… Late fee applies only from Day 7 onwards\n\nPay on time = 100% free Loan."
         },
 
-        // â”€â”€ ADVANCE AMOUNT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // â”€â”€ Loan AMOUNT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         {
-            patterns: ['how much', 'advance amount', 'advance amount', 'maximum amount',
+            patterns: ['how much', 'Loan amount', 'Loan amount', 'maximum amount',
                        'minimum amount', 'credit limit', 'how much money',
                        'kitna milega', 'available credit'],
-            answer: "The advance amount available to you depends on your individual eligibility profile. The approved amount, repayment date, and all applicable charges are displayed inside the app before you accept â€” so you always know exactly what you're agreeing to before you proceed."
+            answer: "The Loan amount available to you depends on your individual eligibility profile. The approved amount, repayment date, and all applicable charges are displayed inside the app before you accept â€” so you always know exactly what you're agreeing to before you proceed."
         },
 
         // â”€â”€ MISSION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // â”€â”€ GST / TAXES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         {
             patterns: ['gst', 'tax', 'taxes', 'gst charges', 'gst on fees'],
-            answer: "GST and applicable taxes may be charged on service fees, penalties, late fees, or other charges as required by Indian law (Terms, Section 7). All such charges are disclosed before you accept the advance â€” nothing is hidden."
+            answer: "GST and applicable taxes may be charged on service fees, penalties, late fees, or other charges as required by Indian law (Terms, Section 7). All such charges are disclosed before you accept the Loan â€” nothing is hidden."
         },
 
         // â”€â”€ VERIFICATION / KYC â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -172,14 +172,14 @@ document.addEventListener('DOMContentLoaded', () => {
         {
             patterns: ['is it a bank', 'nbfc', 'rbi registered', 'rbi',
                        'regulated', 'bank registered', 'not a bank'],
-            answer: "Truepocket is an LLP registered company and operates on an LSP (Lending Service Provider) model connecting with NBFCs. As disclosed in our Terms (Section 12):\n\n• Advances are facilitated through our NBFC partners\n• Intended for eligible users\n• We do not accept public deposits or investment funds\n• Advance availability depends on partner NBFC funds and internal policies\n\nThis transparency is part of our commitment to honest communication."
+            answer: "Truepocket is an LLP registered company and operates on an LSP (Lending Service Provider) model connecting with NBFCs. As disclosed in our Terms (Section 12):\n\n• Loans are facilitated through our NBFC partners\n• Intended for eligible users\n• We do not accept public deposits or investment funds\n• Loan availability depends on partner NBFC funds and internal policies\n\nThis transparency is part of our commitment to honest communication."
         },
 
         // â”€â”€ FRAUD PREVENTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         {
             patterns: ['fraud', 'fake documents', 'false information',
                        'fraudulent', 'account suspended', 'banned'],
-            answer: "Truepocket takes fraud very seriously (Terms, Section 11). The following are strictly prohibited:\n\nâŒ Submitting false information\nâŒ Using forged documents\nâŒ Using another person's identity\nâŒ Unauthorized access attempts\n\nViolations may result in account suspension, advance rejection, legal action, or reporting to relevant authorities."
+            answer: "Truepocket takes fraud very seriously (Terms, Section 11). The following are strictly prohibited:\n\nâŒ Submitting false information\nâŒ Using forged documents\nâŒ Using another person's identity\nâŒ Unauthorized access attempts\n\nViolations may result in account suspension, Loan rejection, legal action, or reporting to relevant authorities."
         },
 
         // â”€â”€ ACCOUNT SUSPENSION / TERMINATION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
