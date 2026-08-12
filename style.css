@@ -5514,9 +5514,9 @@ section.hero {
 /* Align hero elements to left on desktop */
 @media (min-width: 993px) {
     .hero-cta {
-        align-items: flex-start !important;
+        align-items: center !important;
     }
     .trust-badges {
-        justify-content: flex-start !important;
+        justify-content: center !important;
     }
 }
