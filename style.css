@@ -5507,3 +5507,14 @@ section.hero {
         display: none;
     }
 }
+
+
+/* Align hero elements to left on desktop */
+@media (min-width: 993px) {
+    .hero-cta {
+        align-items: flex-start !important;
+    }
+    .trust-badges {
+        justify-content: flex-start !important;
+    }
+}
