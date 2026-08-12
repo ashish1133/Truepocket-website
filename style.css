@@ -869,7 +869,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .eligibility { color: var(--text-muted); font-size: 13px; }
 
 /* Trust badges */
-.trust-badges { display:flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 24px; align-items:center; }
+.trust-badges { display:flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 24px; align-items:center; width: 100%; }
 .badge-item { display:flex; gap:10px; align-items:center; background: rgba(255,255,255,0.03); padding:10px 14px; border-radius:12px; border:1px solid rgba(148,163,184,0.08);} 
 .badge-item i { font-size:20px; color: #8ab4ff; }
 .badge-item strong { display:block; font-size:13px; }
