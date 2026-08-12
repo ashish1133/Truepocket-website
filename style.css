@@ -623,13 +623,13 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1.3fr 0.7fr;
+    grid-template-columns: 1.4fr 0.6fr;
     gap: 28px;
     align-items: start;
 }
 
 .hero-content {
-    max-width: 700px;
+    max-width: 850px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -691,7 +691,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 900;
     margin-bottom: 16px;
     letter-spacing: -1.5px;
