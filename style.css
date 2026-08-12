@@ -693,7 +693,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 .hero-content h1 {
     font-size: 56px;
     font-weight: 900;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -1.5px;
     background: linear-gradient(135deg, #ffffff 0%, var(--neon-green) 40%, var(--neon-blue) 70%, #ffffff 100%);
     background-size: 200% auto;
@@ -702,7 +702,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
     background-clip: text;
     animation: gradientFlow 6s ease infinite;
     text-shadow: 0 0 60px rgba(0, 255, 204, 0.3);
-    line-height: 1.1;
+    line-height: 1.05;
 }
 
 @keyframes gradientFlow {
