@@ -623,13 +623,13 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.3fr 0.7fr;
     gap: 28px;
     align-items: start;
 }
 
 .hero-content {
-    max-width: 580px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -691,7 +691,7 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
 }
 
 .hero-content h1 {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: 900;
     margin-bottom: 16px;
     letter-spacing: -1.5px;
@@ -702,7 +702,9 @@ p, li, h1, h2, h3, h4 { line-height: 1.45; }
     background-clip: text;
     animation: gradientFlow 6s ease infinite;
     text-shadow: 0 0 60px rgba(0, 255, 204, 0.3);
-    line-height: 1.05;
+    line-height: 1.1;
+    width: 100%;
+    max-width: 100%;
 }
 
 @keyframes gradientFlow {
